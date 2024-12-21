@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <script defer src="./assets/js/index.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="timer">00:00</div>
+
+    <input type="checkbox" id="menu" />
+    <label class="menu-label" for="menu">
+      <img src="./assets/img/settings.svg" alt="" />
+    </label>
+    <div class="menu-box">
+      <div class="input-wrapper">
+        <label for="alert-time">Общее время </label>
+        <input type="number" id="total-time" value="600" />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="alert-time">Время напоминания </label>
+        <input type="number" id="alert-time" value="180" />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="final-seconds">Обратный отсчет </label>
+        <input type="number" id="final-seconds" value="10" />
+      </div>
+
+      <button id="start-timer">Start</button>
+      <button id="stop-timer">Stop</button>
+    </div>
+
+    <audio
+      id="alert-sound"
+      src="./assets/sounds/alert.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="final-sound"
+      src="./assets/sounds/final-seconds.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="final-stop"
+      src="./assets/sounds/gong.mp3"
+      preload="auto"
+    ></audio>
+  </body>
+</html>
